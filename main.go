@@ -11,7 +11,7 @@ func init() {
 }
 
 func main() {
-	fmt.Println("rabbitmq start")
+	fmt.Println("server")
 	engine := router.GetEngine()
 	if err := engine.Run(":8060"); err != nil {
 		panic(err)
