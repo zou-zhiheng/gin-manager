@@ -11,7 +11,7 @@ func init() {
 }
 
 func main() {
-	fmt.Println("coding")
+	fmt.Println("s coding")
 	engine := router.GetEngine()
 	if err := engine.Run(":8060"); err != nil {
 		panic(err)
