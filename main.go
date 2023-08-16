@@ -2,11 +2,12 @@ package main
 
 import (
 	"fmt"
+	"sdlManager-mysql/initialize"
 	"sdlManager-mysql/router"
 )
 
 func init() {
-	//initialize.Init()
+	initialize.Init()
 }
 
 func main() {
