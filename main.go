@@ -2,12 +2,13 @@ package main
 
 import (
 	"fmt"
+	"sdlManager-mysql/initialize"
 	"sync"
 	"time"
 )
 
 func init() {
-	//initialize.Init()
+	initialize.Init()
 }
 
 func main() {
