@@ -1,10 +1,8 @@
 package main
 
 import (
-	"fmt"
 	"sdlManager-mysql/initialize"
-	"sync"
-	"time"
+	"sdlManager-mysql/router"
 )
 
 func init() {
@@ -13,14 +11,9 @@ func init() {
 
 func main() {
 
-	var pool sync.Pool
-	pool.Put(func() {
-		fmt.Println("pool")
-	})
-
-	a := pool.Get().(func())
-	go a()
-
-	time.Sleep(1)
+	engine := router.GetEngine()
+	if err := engine.Run("7001"); err != nil {
+		panic(err)
+	}
 
 }
